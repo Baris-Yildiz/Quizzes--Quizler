@@ -1,0 +1,11 @@
+0 read r3 #fall time
+1 read r2 #init position
+2 read r1 #init velocity
+3 setn r4 -5 #gravity/2
+4 mul r5 r3 r3 #final pos will be stored in r5, this step adds t squared to r5
+5 mul r5 r5 r4 #multiply r5 by gravity/2
+6 mul r6 r1 r3 # store init. velocity times time to r6
+7 add r5 r6 r5 #add r6 to r5
+8 add r5 r5 r2 #finally, add init. pos to r5 to get final position
+9 write r5
+10 halt
